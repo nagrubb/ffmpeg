@@ -1,0 +1,85 @@
+cmake_minimum_required(VERSION 3.7)
+project(ffmpeg)
+
+add_definitions(-D_ISOC99_SOURCE -DHAVE_AV_CONFIG_H)
+
+include_directories(../.)
+include_directories(.././)
+
+set(SRC_FILES
+        adler32.c
+        aes.c
+        aes_ctr.c
+        audio_fifo.c
+        avstring.c
+        base64.c
+        blowfish.c
+        bprint.c
+        buffer.c
+        camellia.c
+        cast5.c
+        channel_layout.c
+        color_utils.c
+        cpu.c
+        crc.c
+        des.c
+        dict.c
+        display.c
+        downmix_info.c
+        error.c
+        eval.c
+        fifo.c
+        file.c
+        file_open.c
+        fixed_dsp.c
+        float_dsp.c
+        frame.c
+        hash.c
+        hmac.c
+        hwcontext.c
+        hwcontext_videotoolbox.c
+        imgutils.c
+        integer.c
+        intmath.c
+        lfg.c
+        lls.c
+        log.c
+        log2_tab.c
+        lzo.c
+        mastering_display_metadata.c
+        mathematics.c
+        md5.c
+        mem.c
+        murmur3.c
+        opt.c
+        parseutils.c
+        pixdesc.c
+        pixelutils.c
+        random_seed.c
+        rational.c
+        rc4.c
+        reverse.c
+        ripemd.c
+        samplefmt.c
+        sha.c
+        spherical.c
+        sha512.c
+        stereo3d.c
+        tea.c
+        threadmessage.c
+        time.c
+        timecode.c
+        tree.c
+        twofish.c
+        utils.c
+        x86/cpu.c
+        x86/fixed_dsp_init.c
+        x86/float_dsp_init.c
+        x86/imgutils_init.c
+        x86/lls_init.c
+        x86/pixelutils_init.c
+        xga_font_data.c
+        xtea.c
+)
+
+add_library(avutil ${SRC_FILES})
